@@ -1,0 +1,18 @@
+name: Refresh LLM Activity Graph Cache
+
+on:
+  schedule:
+    # Run every 2 hours
+    - cron: '0 */2 * * *'
+
+jobs:
+  refresh-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh image cache
+        run: |
+          echo "Refreshing LLM activity graph cache..."
+          curl -H "User-Agent: GitHub-Camo" \
+               -H "Accept: image/svg+xml,image/*,*/*" \
+               "https://llm.timoreichert.com/60a403de-c2ec-473b-aa9e-d0209ce17220-dark-biweekly.svg"
+          echo "Cache refresh triggered successfully"
