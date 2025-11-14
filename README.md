@@ -13,10 +13,11 @@ Timo is a founder and software engineer with 7+ years of hands-on experience bui
 - BAML, E2B
 
 **Infrastructure & Tools**
+- Monolith & Microservices Architecture
 - PostgreSQL, Redis, MongoDB
-- WebSockets, Microservices
-- Foundry, OpenZeppelin
-- CI/CD, Infrastructure as Code
+- REST, WebSockets, GraphQL
+- Foundry, Hardhat
+- CI/CD, Infrastructure as Code, GIT
 
 **AI & Development Tools**
 - Claude AI, Cursor
