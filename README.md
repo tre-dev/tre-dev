@@ -1,16 +1,35 @@
-## Hi there 👋
+# Hey there!
 
-<!--
-**tre-dev/tre-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Timo is a founder and software engineer with 7+ years of hands-on experience building products, specialised on the intersection between gaming, blockchain, AI and decentralized systems. Entirely self-taught, he has evolved from early web development to leading complex projects that push the boundaries of whats possible.
 
-Here are some ideas to get you started:
+![LLM Activity](https://llm.timoreichert.com/60a403de-c2ec-473b-aa9e-d0209ce17220-dark-biweekly.svg)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Technical Stack
+
+**Languages & Frameworks**
+- TypeScript, Node.js, GoLang
+- React, Next.js, Vue, Nuxt.js
+- Solidity
+- BAML, E2B
+
+**Infrastructure & Tools**
+- PostgreSQL, Redis, MongoDB
+- WebSockets, Microservices
+- Foundry, OpenZeppelin
+- CI/CD, Infrastructure as Code
+
+**AI & Development Tools**
+- Claude AI, Cursor
+- LLM Integration & Automation
+
+**Specializations**
+- Blockchain & Web3 Development
+- Smart Contract Architecture
+- Real-time Gaming Systems
+- Cloud-Native Architecture
+- AI-Powered Development
+
+## Connect With Me
+
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://timoreichert.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/timoreichert)
