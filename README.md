@@ -1,6 +1,6 @@
 # Hey there!
 
-Timo is a founder and software engineer with 7+ years of hands-on experience building products, specialised on the intersection between gaming, blockchain, AI and decentralized systems. Entirely self-taught, he has evolved from early web development to leading complex projects that push the boundaries of whats possible.
+I'm a founder and software engineer with 8+ years of hands-on experience building products at the intersection of gaming, blockchain, AI and decentralized systems. Entirely self-taught, I've evolved from early web development to leading complex projects that push the boundaries of what's possible.
 
 ![LLM Activity](https://llm.timoreichert.com/60a403de-c2ec-473b-aa9e-d0209ce17220-dark-biweekly.svg)
 
