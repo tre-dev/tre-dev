@@ -13,9 +13,22 @@ jobs:
       - name: Purge GitHub camo image cache
         run: |
           echo "Purging LLM activity graph from GitHub's camo cache..."
-          curl -s https://github.com/${{ github.repository }}/blob/main/README.md | \
+          echo "Fetching README from GitHub..."
+          CAMO_URLS=$(curl -s https://github.com/${{ github.repository }}/blob/main/README.md | \
             grep -Eo '<img src=\\"[^"]+\\"' | \
             grep camo | \
-            grep -Eo 'https[^\\]+' | \
-            xargs -I {} curl -w "\n" -s -X PURGE {}
-          echo "Cache purge complete"
+            grep -Eo 'https[^\\]+')
+
+          echo "Found camo URLs:"
+          echo "$CAMO_URLS"
+
+          if [ -z "$CAMO_URLS" ]; then
+            echo "No camo URLs found. Debugging..."
+            echo "Raw img tags found:"
+            curl -s https://github.com/${{ github.repository }}/blob/main/README.md | \
+              grep -Eo '<img src=\\"[^"]+\\"' | head -5
+          else
+            echo "Purging URLs..."
+            echo "$CAMO_URLS" | xargs -I {} curl -w "\n" -s -X PURGE {}
+            echo "Cache purge complete"
+          fi
