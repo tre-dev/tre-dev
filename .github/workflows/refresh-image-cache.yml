@@ -13,22 +13,19 @@ jobs:
       - name: Purge GitHub camo image cache
         run: |
           echo "Purging LLM activity graph from GitHub's camo cache..."
-          echo "Fetching README from GitHub..."
-          CAMO_URLS=$(curl -s https://github.com/${{ github.repository }}/blob/main/README.md | \
-            grep -Eo '<img src=\\"[^"]+\\"' | \
-            grep camo | \
-            grep -Eo 'https[^\\]+')
 
-          echo "Found camo URLs:"
-          echo "$CAMO_URLS"
+          # Extract the camo URL from the profile page
+          CAMO_URL=$(curl -s https://github.com/tre-dev | \
+            grep -i "llm.timoreichert.com" | \
+            grep -o 'https://camo.githubusercontent.com/[^"]*' | \
+            head -1)
 
-          if [ -z "$CAMO_URLS" ]; then
-            echo "No camo URLs found. Debugging..."
-            echo "Raw img tags found:"
-            curl -s https://github.com/${{ github.repository }}/blob/main/README.md | \
-              grep -Eo '<img src=\\"[^"]+\\"' | head -5
+          if [ -n "$CAMO_URL" ]; then
+            echo "Found camo URL: $CAMO_URL"
+            RESPONSE=$(curl -w "\n" -s -X PURGE "$CAMO_URL")
+            echo "Response: $RESPONSE"
+            echo "Cache purged successfully"
           else
-            echo "Purging URLs..."
-            echo "$CAMO_URLS" | xargs -I {} curl -w "\n" -s -X PURGE {}
-            echo "Cache purge complete"
+            echo "Error: Could not find camo URL for LLM activity graph"
+            exit 1
           fi
