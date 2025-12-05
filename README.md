@@ -2,7 +2,7 @@
 
 I'm a founder and software engineer with 8+ years of hands-on experience building products at the intersection of gaming, blockchain, AI and decentralized systems. Entirely self-taught, I've evolved from early web development to leading complex projects that push the boundaries of what's possible.
 
-![LLM Activity](https://llm.timoreichert.com/60a403de-c2ec-473b-aa9e-d0209ce17220-dark-biweekly-compact.svg)
+![LLM Activity](https://llm.timoreichert.com/eccf71f0-7192-4e1b-b3e9-645ce7c446c9-dark-biweekly-compact.svg)
 
 ## Technical Stack
 
